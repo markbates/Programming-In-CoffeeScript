@@ -1,0 +1,4 @@
+option '-n', '--name [NAME]', 'name you want to greet'
+task "greet", "Say hi to someone", (options)->
+  throw new Error("[NAME] is required") unless options.name?
+  console.log "Hello, #{options.name}"
