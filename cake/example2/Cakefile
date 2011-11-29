@@ -1,0 +1,8 @@
+option '-n', '--name [NAME]', 'name you want to greet'
+task "greet", "Say hi to someone", (options)->
+  message = "Hello, "
+  if options.name?
+    message += options.name
+  else
+    message += "World"
+  console.log message

@@ -1,0 +1,3 @@
+obj = {}
+
+console.log obj

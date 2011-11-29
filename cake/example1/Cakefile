@@ -1,0 +1,2 @@
+task "greet", "Say hi to the nice people", ->
+  console.log "Hello, World!"
