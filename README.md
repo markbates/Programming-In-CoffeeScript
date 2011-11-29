@@ -8,6 +8,8 @@ The book can currently be ordered as a Rough Cut through Safari:
 
 ## Table of Contents
 
+This README file will also always contain the latest and most up to date Table of Contents for the book.
+
 <pre>
 Dedication
 Preface
@@ -62,7 +64,7 @@ Part 2: CoffeeScript in Practice
     Introduction to Jasmine
     Unit Testing
     Testing UI Elements
-  Chapter 9: Debugging CoffeeScript
+  Chapter 9: Intro to Node.js
   Chapter 10: jQuery and CoffeeScript
   Chapter 11: Backbone.js and CoffeeScript
   Chapter 12: Wrapping Up
