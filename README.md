@@ -1,6 +1,6 @@
 # Programming in CoffeeScript
 
-This repository contains all of the source code for the book, Programming in CoffeeScript.
+This repository contains all of the source code for the book, Programming in CoffeeScript. As I write the book this repository will be updated with any changes, additions, subtractions, etc... that come along.
 
 The book can currently be ordered as a Rough Cut through Safari:
 
