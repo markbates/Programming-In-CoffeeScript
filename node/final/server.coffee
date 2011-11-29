@@ -14,7 +14,7 @@ class Application
     @standardizePathname()
     @setContentType()
       
-    if /^\/javascripts\//.test @pathInfo.pathname
+    if /^\/javascripts\//.test @pathname
       @processJavascript()
     else
       @processPublic()
@@ -23,7 +23,7 @@ class Application
     callback(@)
     
   processJavascript: ->
-    file = (/\/javascripts\/(.+)\.js/.exec @pathInfo.pathname)[1]
+    file = (/\/javascripts\/(.+)\.js/.exec @pathname)[1]
     fs.readFile "src/#{file}.coffee", "utf-8", (err, data) =>
       if err?
         @write("", 404)
@@ -32,7 +32,7 @@ class Application
         @write(js)
         
   processPublic: ->
-    fs.readFile "public/#{@pathInfo.pathname}", "utf-8", (err, data) =>
+    fs.readFile "public/#{@pathname}", "utf-8", (err, data) =>
       if err?
         @write("Oops! We couldn't find the page you were looking for.", 404)
       else
@@ -42,10 +42,11 @@ class Application
     if @pathInfo.pathname is "/" or @pathInfo.pathname is ""
       @pathInfo.pathname = "index"
     unless /\..+$/.test @pathInfo.pathname
-      @pathInfo.pathname += ".html"    
+      @pathInfo.pathname += ".html"
+    @pathname = @pathInfo.pathname
     
   setContentType: ->
-    ext = (/\.(.+)$/.exec @pathInfo.pathname)[1].toLowerCase()
+    ext = (/\.(.+)$/.exec @pathname)[1].toLowerCase()
     switch ext
       when "png", "jpg", "jpeg", "gif"
         @contentType = "image/#{ext}"
