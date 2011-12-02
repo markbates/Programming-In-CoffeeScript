@@ -60,7 +60,8 @@ Part 2: CoffeeScript in Practice
     Invoking Other Tasks
   Chapter 8: Testing with Jasmine
     Why are we testing?
-    Installing and Setting up Jasmine
+    Installing Jasmine
+    Setting up Jasmine
     Introduction to Jasmine
     Unit Testing
     Testing UI Elements

@@ -1,0 +1,11 @@
+src_files:
+  - "**/*.coffee"
+
+helpers:
+
+spec_files:
+  - /**/*_spec.coffee
+
+src_dir: "src"
+
+spec_dir: spec/javascripts
