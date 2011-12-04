@@ -59,12 +59,12 @@ Part 2: CoffeeScript in Practice
     Using Options
     Invoking Other Tasks
   Chapter 8: Testing with Jasmine
-    Why are we testing?
     Installing Jasmine
     Setting up Jasmine
     Introduction to Jasmine
     Unit Testing
-    Testing UI Elements
+    Before and After
+    Custom Matchers
   Chapter 9: Intro to Node.js
   Chapter 10: jQuery and CoffeeScript
   Chapter 11: Backbone.js and CoffeeScript

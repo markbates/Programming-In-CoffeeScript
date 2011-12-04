@@ -1,0 +1,12 @@
+"
+  I solemnly swear to test all of my code.
+  I will not test just part of my code, but rather all of it.
+  I understand that failure to test my code
+  will result in Mark finding me and beating me with my own shoes.
+  I do this, not just for me,
+  but for all developers who have to work with my code base.
+  I also pledge to make other developers take this pledge.
+  Should the refuse to take this pledge I will tell Mark
+  and he will beat them with their own shoes.
+  Viva La Tests!
+"
