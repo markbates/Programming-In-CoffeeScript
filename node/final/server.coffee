@@ -64,7 +64,7 @@ class Application
     @endTime - @startTime
 
 server = http.createServer (req, res) ->
-  do ->
+  do (req, res)->
     app = new Application(req, res)
     app.process (app)->
       console?.log "Processed: #{req.url} (#{app.time()}ms)"

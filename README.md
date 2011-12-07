@@ -66,6 +66,9 @@ Part 2: CoffeeScript in Practice
     Before and After
     Custom Matchers
   Chapter 9: Intro to Node.js
+    What is Node.js?
+    Installing Node
+    Getting Started
   Chapter 10: jQuery and CoffeeScript
   Chapter 11: Backbone.js and CoffeeScript
   Chapter 12: Wrapping Up

@@ -97,13 +97,13 @@
   })();
 
   server = http.createServer(function(req, res) {
-    return (function() {
+    return (function(req, res) {
       var app;
       app = new Application(req, res);
       return app.process(function(app) {
         return typeof console !== "undefined" && console !== null ? console.log("Processed: " + req.url + " (" + (app.time()) + "ms)") : void 0;
       });
-    })();
+    })(req, res);
   });
 
   server.listen(3000, "127.0.0.1");
