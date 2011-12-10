@@ -1,14 +1,10 @@
 (function() {
-  var Application, CoffeeScript, JavaScriptProcessor, Processor, PublicProcessor, fs, http, ip, port, server, url;
+  var Application, JavaScriptProcessor, Processor, PublicProcessor, http, ip, port, server, url;
   var __hasProp = Object.prototype.hasOwnProperty, __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   http = require('http');
 
   url = require('url');
-
-  fs = require('fs');
-
-  CoffeeScript = require('coffee-script');
 
   Application = (function() {
 
@@ -72,26 +68,9 @@
       JavaScriptProcessor.__super__.constructor.apply(this, arguments);
     }
 
-    JavaScriptProcessor.prototype.contentType = function() {
-      return "application/x-javascript";
-    };
+    JavaScriptProcessor.prototype.contentType = function() {};
 
-    JavaScriptProcessor.prototype.pathname = function() {
-      var file;
-      file = (/\/javascripts\/(.+)\.js/.exec(this.pathInfo.pathname))[1];
-      return "" + file + ".coffee";
-    };
-
-    JavaScriptProcessor.prototype.process = function() {
-      var _this = this;
-      return fs.readFile("src/" + (this.pathname()), "utf-8", function(err, data) {
-        if (err != null) {
-          return _this.write("", 404);
-        } else {
-          return _this.write(CoffeeScript.compile(data));
-        }
-      });
-    };
+    JavaScriptProcessor.prototype.process = function() {};
 
     return JavaScriptProcessor;
 
@@ -105,43 +84,9 @@
       PublicProcessor.__super__.constructor.apply(this, arguments);
     }
 
-    PublicProcessor.prototype.contentType = function() {
-      var ext;
-      ext = (/\.(.+)$/.exec(this.pathname()))[1].toLowerCase();
-      switch (ext) {
-        case "png":
-        case "jpg":
-        case "jpeg":
-        case "gif":
-          return "image/" + ext;
-        default:
-          return "text/html";
-      }
-    };
+    PublicProcessor.prototype.contentType = function() {};
 
-    PublicProcessor.prototype.process = function() {
-      var _this = this;
-      return fs.readFile("public/" + (this.pathname()), "utf-8", function(err, data) {
-        if (err != null) {
-          return _this.write("Oops! We couldn't find the page you were looking for.", 404);
-        } else {
-          return _this.write(data);
-        }
-      });
-    };
-
-    PublicProcessor.prototype.pathname = function() {
-      if (!this._pathname) {
-        if (this.pathInfo.pathname === "/" || this.pathInfo.pathname === "") {
-          this.pathInfo.pathname = "index";
-        }
-        if (!/\..+$/.test(this.pathInfo.pathname)) {
-          this.pathInfo.pathname += ".html";
-        }
-        this._pathname = this.pathInfo.pathname;
-      }
-      return this._pathname;
-    };
+    PublicProcessor.prototype.process = function() {};
 
     return PublicProcessor;
 

@@ -105,43 +105,9 @@
       PublicProcessor.__super__.constructor.apply(this, arguments);
     }
 
-    PublicProcessor.prototype.contentType = function() {
-      var ext;
-      ext = (/\.(.+)$/.exec(this.pathname()))[1].toLowerCase();
-      switch (ext) {
-        case "png":
-        case "jpg":
-        case "jpeg":
-        case "gif":
-          return "image/" + ext;
-        default:
-          return "text/html";
-      }
-    };
+    PublicProcessor.prototype.contentType = function() {};
 
-    PublicProcessor.prototype.process = function() {
-      var _this = this;
-      return fs.readFile("public/" + (this.pathname()), "utf-8", function(err, data) {
-        if (err != null) {
-          return _this.write("Oops! We couldn't find the page you were looking for.", 404);
-        } else {
-          return _this.write(data);
-        }
-      });
-    };
-
-    PublicProcessor.prototype.pathname = function() {
-      if (!this._pathname) {
-        if (this.pathInfo.pathname === "/" || this.pathInfo.pathname === "") {
-          this.pathInfo.pathname = "index";
-        }
-        if (!/\..+$/.test(this.pathInfo.pathname)) {
-          this.pathInfo.pathname += ".html";
-        }
-        this._pathname = this.pathInfo.pathname;
-      }
-      return this._pathname;
-    };
+    PublicProcessor.prototype.process = function() {};
 
     return PublicProcessor;
 

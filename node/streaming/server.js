@@ -8,14 +8,15 @@
   ip = "127.0.0.1";
 
   server = http.createServer(function(req, res) {
-    var data;
-    data = "Hello World!";
     res.writeHead(200, {
-      "Content-Type": "text/plain",
-      "Content-Length": Buffer.byteLength(data, "utf-8")
+      "Content-Type": "text/plain"
     });
-    res.write(data, "utf-8");
-    return res.end();
+    setInterval(function() {
+      return res.write("All work and no play makes Jack a dull boy. ");
+    }, 10);
+    return setTimeout(function() {
+      return res.end();
+    }, 30000);
   });
 
   server.listen(port, ip);

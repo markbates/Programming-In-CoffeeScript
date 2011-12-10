@@ -69,6 +69,9 @@ Part 2: CoffeeScript in Practice
     What is Node.js?
     Installing Node
     Getting Started
+    Streaming Responses
+    Building a CoffeeScript Server
+    Trying Out the Server
   Chapter 10: jQuery and CoffeeScript
   Chapter 11: Backbone.js and CoffeeScript
   Chapter 12: Wrapping Up
