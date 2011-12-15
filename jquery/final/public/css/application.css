@@ -1,0 +1,20 @@
+.btn {
+  height: 100px;
+  font-weight: bold;
+  font-size: 48px;
+}
+input {
+  font-weight: bold;
+  font-size: 48px;
+  height: 100px;
+  text-align: right;
+}
+.row {
+  margin-bottom: 20px;
+}
+.container {
+  border: 1px solid #999;
+}
+h1 {
+  text-align: center;
+}
