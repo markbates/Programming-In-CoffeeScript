@@ -6,7 +6,7 @@
   I do this, not just for me,
   but for all developers who have to work with my code base.
   I also pledge to make other developers take this pledge.
-  Should the refuse to take this pledge I will tell Mark
+  Should they refuse to take this pledge I will tell Mark
   and he will beat them with their own shoes.
   Viva La Tests!
 "

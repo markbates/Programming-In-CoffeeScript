@@ -7,8 +7,8 @@
         return expect(calculator.add(1, 1)).toEqual(2);
       });
     });
-    describe("#substract", function() {
-      return it("subtractors two numbers", function() {
+    describe("#subtract", function() {
+      return it("subtracts two numbers", function() {
         var calculator;
         calculator = new Calculator();
         return expect(calculator.subtract(10, 1)).toEqual(9);

@@ -1,1 +1,2 @@
-console.log 'Hello, World!'
+greeting = "Hello, World!"
+console.log greeting

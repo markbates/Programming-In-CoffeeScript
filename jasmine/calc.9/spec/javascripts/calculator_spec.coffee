@@ -19,9 +19,9 @@ describe "Calculator", ->
     it "adds two numbers", ->
       expect(@calculator.add(1, 1)).toEqual 2
     
-  describe "#substract", ->
+  describe "#subtract", ->
     
-    it "subtractors two numbers", ->
+    it "subtracts two numbers", ->
       expect(@calculator.subtract(10, 1)).toEqual 9
     
   describe "#multiply", ->

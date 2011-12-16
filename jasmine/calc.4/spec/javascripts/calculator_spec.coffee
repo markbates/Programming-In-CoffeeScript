@@ -4,9 +4,9 @@ describe "Calculator", ->
     
     it "adds two numbers", ->
     
-  describe "#substract", ->
+  describe "#subtract", ->
     
-    it "subtractors two numbers", ->
+    it "subtracts two numbers", ->
     
   describe "#multiply", ->
     
