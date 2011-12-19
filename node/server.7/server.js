@@ -1,6 +1,7 @@
 (function() {
-  var Application, CoffeeScript, JavaScriptProcessor, Processor, PublicProcessor, fs, http, ip, port, server, url;
-  var __hasProp = Object.prototype.hasOwnProperty, __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+  var Application, CoffeeScript, JavaScriptProcessor, Processor, PublicProcessor, fs, http, ip, port, server, url,
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   http = require('http');
 
@@ -64,9 +65,9 @@
 
   })();
 
-  JavaScriptProcessor = (function() {
+  JavaScriptProcessor = (function(_super) {
 
-    __extends(JavaScriptProcessor, Processor);
+    __extends(JavaScriptProcessor, _super);
 
     function JavaScriptProcessor() {
       JavaScriptProcessor.__super__.constructor.apply(this, arguments);
@@ -95,11 +96,11 @@
 
     return JavaScriptProcessor;
 
-  })();
+  })(Processor);
 
-  PublicProcessor = (function() {
+  PublicProcessor = (function(_super) {
 
-    __extends(PublicProcessor, Processor);
+    __extends(PublicProcessor, _super);
 
     function PublicProcessor() {
       PublicProcessor.__super__.constructor.apply(this, arguments);
@@ -111,7 +112,7 @@
 
     return PublicProcessor;
 
-  })();
+  })(Processor);
 
   port = 3000;
 

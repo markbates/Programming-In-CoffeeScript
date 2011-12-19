@@ -1,3 +1,4 @@
+(function() {
 
   describe("Calculator", function() {
     describe("#add", function() {
@@ -13,3 +14,5 @@
       return it("divides to numbers", function() {});
     });
   });
+
+}).call(this);

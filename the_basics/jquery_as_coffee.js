@@ -1,3 +1,4 @@
+(function() {
 
   $(function() {
     return $.get('example.php', function(data) {
@@ -8,3 +9,5 @@
       }
     }, 'json');
   });
+
+}).call(this);

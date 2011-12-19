@@ -1,3 +1,4 @@
+(function() {
 
   option('-n', '--name [NAME]', 'name you want to greet');
 
@@ -11,3 +12,5 @@
     }
     return console.log(message);
   });
+
+}).call(this);

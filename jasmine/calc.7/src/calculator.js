@@ -1,3 +1,4 @@
+(function() {
 
   this.Calculator = (function() {
 
@@ -22,3 +23,5 @@
     return Calculator;
 
   })();
+
+}).call(this);

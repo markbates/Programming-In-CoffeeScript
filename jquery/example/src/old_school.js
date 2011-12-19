@@ -1,3 +1,4 @@
+(function() {
 
   window.onload = function() {
     var url, xmlHttpRequst;
@@ -20,3 +21,5 @@
     };
     return xmlHttpRequst.send();
   };
+
+}).call(this);

@@ -1,3 +1,4 @@
+(function() {
 
   $(function() {
     var url;
@@ -13,3 +14,5 @@
       return el.append("</ul>");
     });
   });
+
+}).call(this);

@@ -1,3 +1,4 @@
+(function() {
 
   this.updateAvatars = function() {
     var name, names, _i, _len, _ref, _results;
@@ -12,3 +13,5 @@
     }
     return _results;
   };
+
+}).call(this);

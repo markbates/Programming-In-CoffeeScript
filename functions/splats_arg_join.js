@@ -1,6 +1,6 @@
 (function() {
-  var joinArgs;
-  var __slice = Array.prototype.slice;
+  var joinArgs,
+    __slice = Array.prototype.slice;
 
   joinArgs = function() {
     var first, last, middle, middles, parts, _i, _j, _len;

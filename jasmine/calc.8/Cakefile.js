@@ -1,6 +1,6 @@
 (function() {
-  var exec;
-  var _this = this;
+  var exec,
+    _this = this;
 
   exec = require('child_process').exec;
 

@@ -1,6 +1,6 @@
 (function() {
-  var end, middle, myArray, start, _i;
-  var __slice = Array.prototype.slice;
+  var end, middle, myArray, start, _i,
+    __slice = Array.prototype.slice;
 
   myArray = ["A", "B", "C", "D"];
 

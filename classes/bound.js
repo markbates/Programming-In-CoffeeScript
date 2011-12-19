@@ -1,6 +1,6 @@
 (function() {
-  var User, bob, log, mary;
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+  var User, bob, log, mary,
+    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
   User = (function() {
 

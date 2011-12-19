@@ -1,3 +1,4 @@
+(function() {
 
   console.log("== Equal: " + (1 === 1));
 
@@ -10,3 +11,5 @@
   console.log("< Less than: " + (1 < 2));
 
   console.log("<= Less than or equal to: " + (1 < 2));
+
+}).call(this);

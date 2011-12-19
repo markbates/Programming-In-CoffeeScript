@@ -1,3 +1,4 @@
+(function() {
 
   describe("Calculator", function() {
     describe("#add", function() {
@@ -29,3 +30,5 @@
       });
     });
   });
+
+}).call(this);

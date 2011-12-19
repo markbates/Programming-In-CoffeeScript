@@ -1,3 +1,4 @@
+(function() {
 
   describe("Calculator", function() {
     return it("does something", function() {
@@ -5,3 +6,5 @@
       return expect(1 + 1).not.toEqual(3);
     });
   });
+
+}).call(this);

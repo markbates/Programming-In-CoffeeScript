@@ -1,3 +1,4 @@
+(function() {
 
   task("clean", "Clean up build directories", function() {
     return console.log("cleaning up...");
@@ -12,3 +13,5 @@
     invoke("build");
     return console.log("packaging...");
   });
+
+}).call(this);

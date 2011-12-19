@@ -1,6 +1,6 @@
 (function() {
-  var anotherObject, key, myObject, value;
-  var __hasProp = Object.prototype.hasOwnProperty;
+  var anotherObject, key, myObject, value,
+    __hasProp = Object.prototype.hasOwnProperty;
 
   myObject = {
     name: "Mark"

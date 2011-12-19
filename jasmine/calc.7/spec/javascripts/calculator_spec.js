@@ -1,3 +1,4 @@
+(function() {
 
   describe("Calculator", function() {
     beforeEach(function() {
@@ -24,3 +25,5 @@
       });
     });
   });
+
+}).call(this);

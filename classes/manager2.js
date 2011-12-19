@@ -1,6 +1,7 @@
 (function() {
-  var Employee, Manager, employee, manager;
-  var __hasProp = Object.prototype.hasOwnProperty, __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
+  var Employee, Manager, employee, manager,
+    __hasProp = Object.prototype.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor; child.__super__ = parent.prototype; return child; };
 
   Employee = (function() {
 
@@ -23,9 +24,9 @@
 
   })();
 
-  Manager = (function() {
+  Manager = (function(_super) {
 
-    __extends(Manager, Employee);
+    __extends(Manager, _super);
 
     function Manager() {
       Manager.__super__.constructor.apply(this, arguments);
@@ -37,7 +38,7 @@
 
     return Manager;
 
-  })();
+  })(Employee);
 
   employee = new Employee({
     name: "Mark",

@@ -1,6 +1,6 @@
 (function() {
-  var a, splatter;
-  var __slice = Array.prototype.slice;
+  var a, splatter,
+    __slice = Array.prototype.slice;
 
   splatter = function() {
     var etc;

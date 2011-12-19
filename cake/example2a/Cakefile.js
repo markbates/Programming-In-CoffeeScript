@@ -1,3 +1,4 @@
+(function() {
 
   option('-n', '--name [NAME]', 'name you want to greet');
 
@@ -5,3 +6,5 @@
     if (options.name == null) throw new Error("[NAME] is required");
     return console.log("Hello, " + options.name);
   });
+
+}).call(this);
