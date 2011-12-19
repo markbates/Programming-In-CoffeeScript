@@ -73,6 +73,8 @@ Part 2: CoffeeScript in Practice
     Building a CoffeeScript Server
     Trying Out the Server
   Chapter 10: jQuery and CoffeeScript
+    What is jQuery?
+    Building a Calculator
   Chapter 11: Backbone.js and CoffeeScript
   Chapter 12: Wrapping Up
 Appendix A: Cheatsheet
