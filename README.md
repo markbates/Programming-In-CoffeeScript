@@ -72,10 +72,12 @@ Part 2: CoffeeScript in Practice
     Streaming Responses
     Building a CoffeeScript Server
     Trying Out the Server
-  Chapter 10: jQuery and CoffeeScript
+  Chapter 10: Example: The Todo List Pt. 1 (Backend)
+    Installing and Setting up Express
+    Building a Calculator
+  Chapter 11: Example: The Todo List Pt. 2 (Frontend)
     What is jQuery?
     Building a Calculator
-  Chapter 11: Backbone.js and CoffeeScript
   Chapter 12: Wrapping Up
 Appendix A: Cheatsheet
 </pre>
