@@ -65,7 +65,8 @@
     };
 
     NewTodoView.prototype.initialize = function() {
-      return this.collection.bind("add", this.modelAdded);
+      this.collection.bind("add", this.modelAdded);
+      return this.$('.todo_title').focus();
     };
 
     NewTodoView.prototype.saveModel = function(e) {
@@ -87,7 +88,8 @@
           return _this.collection.add(model);
         },
         error: function(model, error) {
-          return alert(error);
+          if (error.responseText != null) error = JSON.parse(error.responseText);
+          return alert(error.message);
         }
       });
     };
@@ -168,7 +170,8 @@
     };
 
     TodoListItemView.prototype.modelSaveFailed = function(model, error) {
-      alert(error);
+      if (error.responseText != null) error = JSON.parse(error.responseText);
+      alert(error.message);
       return this.$('.todo_title').val(this.model.get('title'));
     };
 

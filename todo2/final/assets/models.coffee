@@ -5,7 +5,7 @@ class @Todo extends Backbone.Model
   
   # Build the url, appending _id if it exists:
   url: ->
-    u = "/todos"
+    u = "/api/todos"
     u += "/#{@get("_id")}" unless @isNew()
     return u
     
@@ -17,10 +17,10 @@ class @Todo extends Backbone.Model
   # Validate the model before saving:
   validate: (attrs) ->
     if !attrs.title? or attrs.title.trim() is ""
-      return "Title can't be blank"
+      return message: "Title can't be blank"
   
 # The Todos collection for the Backbone client:
 class @Todos extends Backbone.Collection
   model: Todo
   
-  url: "/todos"
+  url: "/api/todos"

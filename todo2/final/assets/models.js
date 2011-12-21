@@ -14,7 +14,7 @@
 
     Todo.prototype.url = function() {
       var u;
-      u = "/todos";
+      u = "/api/todos";
       if (!this.isNew()) u += "/" + (this.get("_id"));
       return u;
     };
@@ -25,7 +25,9 @@
 
     Todo.prototype.validate = function(attrs) {
       if (!(attrs.title != null) || attrs.title.trim() === "") {
-        return "Title can't be blank";
+        return {
+          message: "Title can't be blank"
+        };
       }
     };
 
@@ -43,7 +45,7 @@
 
     Todos.prototype.model = Todo;
 
-    Todos.prototype.url = "/todos";
+    Todos.prototype.url = "/api/todos";
 
     return Todos;
 

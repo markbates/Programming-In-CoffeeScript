@@ -31,6 +31,7 @@ class @NewTodoView extends Backbone.View
 
   initialize: ->
     @collection.bind("add", @modelAdded)
+    @$('.todo_title').focus()
 
   saveModel: (e) =>
     e?.preventDefault()
@@ -44,8 +45,10 @@ class @NewTodoView extends Backbone.View
     model.save attrs,
       success: =>
         @collection.add(model)
-      error: (model, error)=>
-        alert error
+      error: (model, error) =>
+        if error.responseText?
+          error = JSON.parse(error.responseText)
+        alert error.message
 
   saveModelKeypress: (e) =>
     if e.keyCode is 13
@@ -97,7 +100,9 @@ class @TodoListItemView extends Backbone.View
     @saveModel()
     
   modelSaveFailed: (model, error) =>
-    alert error
+    if error.responseText?
+      error = JSON.parse(error.responseText)
+    alert error.message
     @$('.todo_title').val(@model.get('title'))
     
   destroy: (e) =>

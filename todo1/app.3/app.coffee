@@ -6,6 +6,9 @@ require("#{__dirname}/src/configuration")
 # Set up the Database:
 require("#{__dirname}/src/models/database")
 
+# Require the Todo model:
+require("#{__dirname}/src/models/todo")
+
 # Set up a routing for our homepage:
 require("#{__dirname}/src/controllers/home_controller")
 
