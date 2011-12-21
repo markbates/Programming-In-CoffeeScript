@@ -23,6 +23,12 @@
       return !(this.get("_id") != null);
     };
 
+    Todo.prototype.validate = function(attrs) {
+      if (!(attrs.title != null) || attrs.title.trim() === "") {
+        return "Title can't be blank";
+      }
+    };
+
     return Todo;
 
   })(Backbone.Model);

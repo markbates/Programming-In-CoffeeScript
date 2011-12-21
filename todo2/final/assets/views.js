@@ -69,7 +69,8 @@
     };
 
     NewTodoView.prototype.saveModel = function(e) {
-      var attrs, checked;
+      var attrs, checked, model,
+        _this = this;
       if (e != null) e.preventDefault();
       attrs = {
         title: this.$('.todo_title').val()
@@ -80,7 +81,15 @@
       } else {
         attrs.state = 'pending';
       }
-      return this.collection.create(attrs);
+      model = new Todo();
+      return model.save(attrs, {
+        success: function() {
+          return _this.collection.add(model);
+        },
+        error: function(model, error) {
+          return alert(error);
+        }
+      });
     };
 
     NewTodoView.prototype.saveModelKeypress = function(e) {
@@ -101,6 +110,7 @@
 
     function TodoListItemView() {
       this.destroy = __bind(this.destroy, this);
+      this.modelSaveFailed = __bind(this.modelSaveFailed, this);
       this.stateChanged = __bind(this.stateChanged, this);
       this.saveModelKeypress = __bind(this.saveModelKeypress, this);
       this.saveModel = __bind(this.saveModel, this);
@@ -119,6 +129,7 @@
     TodoListItemView.prototype.initialize = function() {
       this.template = _.template($('#list_item_template').html());
       this.model.bind("change", this.render);
+      this.model.bind("error", this.modelSaveFailed);
       return this.render();
     };
 
@@ -154,6 +165,11 @@
 
     TodoListItemView.prototype.stateChanged = function(e) {
       return this.saveModel();
+    };
+
+    TodoListItemView.prototype.modelSaveFailed = function(model, error) {
+      alert(error);
+      return this.$('.todo_title').val(this.model.get('title'));
     };
 
     TodoListItemView.prototype.destroy = function(e) {

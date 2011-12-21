@@ -74,7 +74,8 @@ Part 2: CoffeeScript in Practice
     Trying Out the Server
   Chapter 10: Example: The Todo List Pt. 1 (Backend)
     Installing and Setting up Express
-    Building a Calculator
+    Setting up MongoDB using Mongoose
+    The Todos Controller
   Chapter 11: Example: The Todo List Pt. 2 (Frontend)
     What is jQuery?
     Building a Calculator

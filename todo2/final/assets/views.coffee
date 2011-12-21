@@ -40,7 +40,12 @@ class @NewTodoView extends Backbone.View
       attrs.state = 'completed'
     else
       attrs.state = 'pending'
-    @collection.create(attrs)
+    model = new Todo()
+    model.save attrs,
+      success: =>
+        @collection.add(model)
+      error: (model, error)=>
+        alert error
 
   saveModelKeypress: (e) =>
     if e.keyCode is 13
@@ -62,6 +67,7 @@ class @TodoListItemView extends Backbone.View
   initialize: ->
     @template = _.template($('#list_item_template').html())
     @model.bind("change", @render)
+    @model.bind("error", @modelSaveFailed)
     @render()
     
   render: =>
@@ -89,6 +95,10 @@ class @TodoListItemView extends Backbone.View
       
   stateChanged: (e) =>
     @saveModel()
+    
+  modelSaveFailed: (model, error) =>
+    alert error
+    @$('.todo_title').val(@model.get('title'))
     
   destroy: (e) =>
     if confirm "Are you sure you want to destroy this todo?"

@@ -14,6 +14,11 @@ class @Todo extends Backbone.Model
   isNew: ->
     !@get("_id")?
   
+  # Validate the model before saving:
+  validate: (attrs) ->
+    if !attrs.title? or attrs.title.trim() is ""
+      return "Title can't be blank"
+  
 # The Todos collection for the Backbone client:
 class @Todos extends Backbone.Collection
   model: Todo
