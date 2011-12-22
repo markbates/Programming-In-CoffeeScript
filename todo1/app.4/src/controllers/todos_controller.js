@@ -4,11 +4,11 @@
     return res.json([{}]);
   });
 
-  app.get('/api/todos/:id', function(req, res) {
+  app.post('/api/todos', function(req, res) {
     return res.json({});
   });
 
-  app.post('/api/todos', function(req, res) {
+  app.get('/api/todos/:id', function(req, res) {
     return res.json({});
   });
 

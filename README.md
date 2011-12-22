@@ -76,6 +76,7 @@ Part 2: CoffeeScript in Practice
     Installing and Setting up Express
     Setting up MongoDB using Mongoose
     Writing the Todo API
+    Querying with Mongoose
   Chapter 11: Example: Todo List Pt. 2 (Client-side)
     Interacting with jQuery
     Setting up Backbone.js
