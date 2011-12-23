@@ -1,0 +1,6 @@
+{
+  todo: {
+    title: "My Todo Title",
+    state: "pending"
+  }
+}
