@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todos</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <%- js('/application') %>
+    
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
+    <%- css('/application') %>
+  </head>
+<body>
+
+<div class="container">
+  <h1>Todo List</h1>
+  <ul id='todos' class='unstyled'>
+    <li id='new_todo'>
+      <div class="clearfix">
+        <div class="input">
+          <div class="input-prepend">
+            <span class='add-on'>New Todo</span>
+            <input class="xlarge todo_title" size="50" type="text" placeholder="Enter your new Todo here..." />
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+  
+</body>
+</html>
