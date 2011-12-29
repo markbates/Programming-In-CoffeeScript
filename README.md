@@ -77,12 +77,18 @@ Part 2: CoffeeScript in Practice
     Setting up MongoDB using Mongoose
     Writing the Todo API
     Querying with Mongoose
-  Chapter 11: Example: Todo List Pt. 2 (Client-side)
+  Chapter 11: Example: Todo List Pt. 2 (Client-side w/ jQuery)
     Priming the HTML with Twitter Bootstrap
     Interacting with jQuery
+    Hooking up the New Todo Form
+    Cleaning up the Todo List with Underscore.js Templates
+    Listing Existing Todos
+    Updating Todos
+    Deleting Todos
+  Chapter 12: Example: Todo List Pt. 3 (Client-side w/ Backbone.js)
     Setting up Backbone.js
     Writing the Models and Collections
     Writing the Views
-  Chapter 12: Wrapping Up
+  Chapter 13: Wrapping Up
 Appendix A: Cheatsheet
 </pre>

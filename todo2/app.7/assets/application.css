@@ -1,0 +1,15 @@
+#todos li {
+  margin-bottom: 20px;
+}
+
+#todos li .todo_title {
+  width: 800px;
+}
+
+#todos li .completed {
+  text-decoration: line-through;
+}
+
+#todos #new_todo .todo_title{
+  width: 758px;
+}
