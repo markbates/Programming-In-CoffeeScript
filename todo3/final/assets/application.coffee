@@ -1,7 +1,7 @@
 #= require "backbone_sync"
 #= require "templates"
-#= require_tree "views"
 #= require_tree "models"
+#= require_tree "views"
 
 $ ->
   # Start Backbone.js App:

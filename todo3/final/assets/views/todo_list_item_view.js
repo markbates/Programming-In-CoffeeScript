@@ -44,13 +44,12 @@
     };
 
     TodoListItemView.prototype.saveModel = function(e) {
-      var attrs, checked;
+      var attrs;
       if (e != null) e.preventDefault();
       attrs = {
         title: this.$('.todo_title').val()
       };
-      checked = this.$('.todo_state').attr('checked');
-      if (checked != null) {
+      if (this.$('.todo_state').attr('checked') != null) {
         attrs.state = 'completed';
       } else {
         attrs.state = 'pending';

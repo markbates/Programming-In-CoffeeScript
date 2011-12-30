@@ -26,8 +26,7 @@ class @TodoListItemView extends Backbone.View
   saveModel: (e) =>
     e?.preventDefault()
     attrs = {title: @$('.todo_title').val()}
-    checked = @$('.todo_state').attr('checked')
-    if checked?
+    if @$('.todo_state').attr('checked')?
       attrs.state = 'completed'
     else
       attrs.state = 'pending'

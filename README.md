@@ -86,9 +86,9 @@ Part 2: CoffeeScript in Practice
     Updating Todos
     Deleting Todos
   Chapter 12: Example: Todo List Pt. 3 (Client-side w/ Backbone.js)
+    What is Backbone.js?
     Setting up Backbone.js
-    Writing the Models and Collections
-    Writing the Views
+    Writing our Todo Model and Collection
   Chapter 13: Wrapping Up
 Appendix A: Cheatsheet
 </pre>
