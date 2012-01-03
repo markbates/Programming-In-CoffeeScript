@@ -89,6 +89,9 @@ Part 2: CoffeeScript in Practice
     What is Backbone.js?
     Setting up Backbone.js
     Writing our Todo Model and Collection
-  Chapter 13: Wrapping Up
-Appendix A: Cheatsheet
+    Listing Todos using a View
+    Creating New Todos
+    A View Per Todo
+    Updating and Validating Models from Views
+    Deleting Models from Views
 </pre>

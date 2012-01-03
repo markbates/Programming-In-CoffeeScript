@@ -10,9 +10,8 @@
     function TodoListItemView() {
       this.destroy = __bind(this.destroy, this);
       this.modelSaveFailed = __bind(this.modelSaveFailed, this);
-      this.stateChanged = __bind(this.stateChanged, this);
-      this.saveModelKeypress = __bind(this.saveModelKeypress, this);
       this.saveModel = __bind(this.saveModel, this);
+      this.handleKeypress = __bind(this.handleKeypress, this);
       this.render = __bind(this.render, this);
       TodoListItemView.__super__.constructor.apply(this, arguments);
     }
@@ -20,8 +19,8 @@
     TodoListItemView.prototype.tagName = 'li';
 
     TodoListItemView.prototype.events = {
-      'keypress .todo_title': 'saveModelKeypress',
-      'change .todo_state': 'stateChanged',
+      'keypress .todo_title': 'handleKeypress',
+      'change .todo_state': 'saveModel',
       'click .danger': 'destroy'
     };
 
@@ -34,13 +33,16 @@
 
     TodoListItemView.prototype.render = function() {
       $(this.el).html(this.template(this.model.toJSON()));
-      this.delegateEvents();
       if (this.model.get('state') === "completed") {
         this.$('.todo_state').attr('checked', true);
         this.$('label.active').removeClass('active');
         this.$('.todo_title').addClass('completed').attr('disabled', true);
       }
       return this;
+    };
+
+    TodoListItemView.prototype.handleKeypress = function(e) {
+      if (e.keyCode === 13) return this.saveModel(e);
     };
 
     TodoListItemView.prototype.saveModel = function(e) {
@@ -57,14 +59,6 @@
       return this.model.save(attrs);
     };
 
-    TodoListItemView.prototype.saveModelKeypress = function(e) {
-      if (e.keyCode === 13) return this.saveModel(e);
-    };
-
-    TodoListItemView.prototype.stateChanged = function(e) {
-      return this.saveModel();
-    };
-
     TodoListItemView.prototype.modelSaveFailed = function(model, error) {
       if (error.responseText != null) error = JSON.parse(error.responseText);
       alert(error.message);
@@ -73,6 +67,7 @@
 
     TodoListItemView.prototype.destroy = function(e) {
       var _this = this;
+      if (e != null) e.preventDefault();
       if (confirm("Are you sure you want to destroy this todo?")) {
         return this.model.destroy({
           success: function() {

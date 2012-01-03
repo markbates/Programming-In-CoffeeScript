@@ -4,8 +4,8 @@ class @TodoListItemView extends Backbone.View
   tagName: 'li'
   
   events:
-    'keypress .todo_title': 'saveModelKeypress'
-    'change .todo_state': 'stateChanged'
+    'keypress .todo_title': 'handleKeypress'
+    'change .todo_state': 'saveModel'
     'click .danger': 'destroy'
   
   initialize: ->
@@ -16,13 +16,16 @@ class @TodoListItemView extends Backbone.View
     
   render: =>
     $(@el).html(@template(@model.toJSON()))
-    @delegateEvents()
     if @model.get('state') is "completed"
       @$('.todo_state').attr('checked', true)
       @$('label.active').removeClass('active')
       @$('.todo_title').addClass('completed').attr('disabled', true)
     return @
     
+  handleKeypress: (e) =>
+    if e.keyCode is 13
+      @saveModel(e)
+
   saveModel: (e) =>
     e?.preventDefault()
     attrs = {title: @$('.todo_title').val()}
@@ -32,13 +35,6 @@ class @TodoListItemView extends Backbone.View
       attrs.state = 'pending'
     @model.save attrs
     
-  saveModelKeypress: (e) =>
-    if e.keyCode is 13
-      @saveModel(e)
-      
-  stateChanged: (e) =>
-    @saveModel()
-    
   modelSaveFailed: (model, error) =>
     if error.responseText?
       error = JSON.parse(error.responseText)
@@ -46,6 +42,7 @@ class @TodoListItemView extends Backbone.View
     @$('.todo_title').val(@model.get('title'))
     
   destroy: (e) =>
+    e?.preventDefault()
     if confirm "Are you sure you want to destroy this todo?"
       @model.destroy
         success: =>
