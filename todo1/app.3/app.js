@@ -1,34 +1,15 @@
 (function() {
-  var app, express,
-    _this = this;
+  var app;
 
-  express = require('express');
+  global.express = require('express');
 
-  global.app = app = module.exports = express.createServer();
+  global.app = app = express.createServer();
 
-  app.configure(function() {
-    app.set('views', "" + __dirname + "/src/views");
-    app.set('view engine', 'ejs');
-    app.use(express.bodyParser());
-    app.use(express.methodOverride());
-    app.use(express.cookieParser());
-    app.use(express.session({
-      secret: 'your secret here'
-    }));
-    app.use(global.app.router);
-    return app.use(express.static(__dirname + '/public'));
-  });
+  require("" + __dirname + "/src/configuration");
 
-  app.configure('development', function() {
-    return app.use(express.errorHandler({
-      dumpExceptions: true,
-      showStack: true
-    }));
-  });
+  require("" + __dirname + "/src/models/database");
 
-  app.get('/', function(req, res) {
-    return res.send("Hello, World!");
-  });
+  require("" + __dirname + "/src/controllers/home_controller");
 
   app.listen(3000);
 
