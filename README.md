@@ -6,6 +6,10 @@ The book can currently be ordered as a Rough Cut through Safari:
 
 [http://my.safaribooksonline.com/book/-/9780132946155](http://my.safaribooksonline.com/book/-/9780132946155)
 
+It can also be pre-ordered on Amazon.com:
+
+[http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=groupgiftlist-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032182010X](http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=groupgiftlist-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032182010X)
+
 ## Table of Contents
 
 This README file will also always contain the latest and most up to date Table of Contents for the book.
