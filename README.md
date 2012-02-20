@@ -45,6 +45,7 @@ Part 1: Core CoffeeScript
     Objects/Hashes
     Loops and Iteration
     Comprehensions
+    The `do` Keyword
   Chapter 6: Classes
     Defining Classes
     Defining Functions
