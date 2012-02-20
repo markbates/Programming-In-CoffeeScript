@@ -39,7 +39,6 @@ Part 1: Core CoffeeScript
     Arguments
     Default Arguments
     Splats...
-    The `do` Keyword
   Chapter 5: Collections and Iterations
     Arrays
     Ranges
