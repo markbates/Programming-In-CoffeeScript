@@ -76,12 +76,12 @@ Part 2: CoffeeScript in Practice
     Streaming Responses
     Building a CoffeeScript Server
     Trying Out the Server
-  Chapter 10: Example: Todo List Pt. 1 (Server-side)
+  Chapter 10: Example: Todo List Part 1 (Server-side)
     Installing and Setting up Express
     Setting up MongoDB using Mongoose
     Writing the Todo API
     Querying with Mongoose
-  Chapter 11: Example: Todo List Pt. 2 (Client-side w/ jQuery)
+  Chapter 11: Example: Todo List Part 2 (Client-side w/ jQuery)
     Priming the HTML with Twitter Bootstrap
     Interacting with jQuery
     Hooking up the New Todo Form
@@ -89,7 +89,7 @@ Part 2: CoffeeScript in Practice
     Listing Existing Todos
     Updating Todos
     Deleting Todos
-  Chapter 12: Example: Todo List Pt. 3 (Client-side w/ Backbone.js)
+  Chapter 12: Example: Todo List Part 3 (Client-side w/ Backbone.js)
     What is Backbone.js?
     Setting up Backbone.js
     Writing our Todo Model and Collection
