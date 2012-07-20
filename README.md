@@ -2,17 +2,11 @@
 
 This repository contains all of the source code for the book, Programming in CoffeeScript. As I write the book this repository will be updated with any changes, additions, subtractions, etc... that come along.
 
-The book can currently be ordered as a Rough Cut through Safari:
+The book can be purchaseed pretty much anywhere you can buy books, both in print and eBook formats (ePUB, MOBI, PDF).
 
-[http://my.safaribooksonline.com/book/-/9780132946155](http://my.safaribooksonline.com/book/-/9780132946155)
+Here's where you can find a comprehensive list of those places:
 
-It can also be pre-ordered on Amazon.com:
-
-[http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=groupgiftlist-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032182010X](http://www.amazon.com/gp/product/032182010X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=groupgiftlist-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=032182010X)
-
-## Table of Contents
-
-This README file will also always contain the latest and most up to date Table of Contents for the book.
+http://books.markbates.com
 
 <pre>
 Dedication
